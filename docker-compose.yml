@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  kafka.dev:
+    container_name: kafka.dev
+    image: spotify/kafka
+    hostname: kafka
+    networks:
+      - bubble
+    ports:
+      - '2181:2181'
+      - '9092:9092'
+    environment:
+      ADVERTISED_HOST: kafka
+      ADVERTISED_PORT: 9092
+
+networks:
+  bubble:
+    external: true
