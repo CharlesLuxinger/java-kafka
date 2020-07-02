@@ -11,7 +11,7 @@ services:
       - '2181:2181'
       - '9092:9092'
     environment:
-      ADVERTISED_HOST: kafka
+      ADVERTISED_HOST: localhost
       ADVERTISED_PORT: 9092
 
 networks:
